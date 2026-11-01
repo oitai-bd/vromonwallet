@@ -1,1 +1,360 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VromonWallet</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+nav{
+    background:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#0EA5E9;
+}
+
+.lang-btn{
+    background:#10B981;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.hero{
+    background:linear-gradient(135deg,#0EA5E9,#10B981);
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.hero .btn{
+    display:inline-block;
+    background:white;
+    color:#0EA5E9;
+    padding:14px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:38px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.dashboard{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.kpi{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.kpi div{
+    background:#eef6ff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.kpi h3{
+    color:#0EA5E9;
+}
+
+footer{
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+.kpi{
+    grid-template-columns:1fr 1fr;
+}
+
+.section-title{
+    font-size:28px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">VromonWallet</div>
+
+    <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">
+        বাংলা
+    </button>
+</nav>
+
+<section class="hero">
+
+    <h1>VromonWallet</h1>
+
+    <p id="subtitle">
+        Travel Fund & Expense Manager
+    </p>
+
+    <p id="tagline">
+        Plan • Collect • Spend • Settle
+    </p>
+
+    <a href="#" class="btn" id="heroBtn">
+        Coming Soon
+    </a>
+
+</section>
+
+<section>
+
+    <h2 class="section-title" id="featureTitle">
+        Why VromonWallet?
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3 id="f1t">🏖 Create Trips</h3>
+            <p id="f1d">Create and manage group tours effortlessly.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f2t">👥 Manage Members</h3>
+            <p id="f2d">Invite and manage tour participants.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f3t">💰 Collect Funds</h3>
+            <p id="f3d">Track member contributions and tour funds.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f4t">💳 Track Expenses</h3>
+            <p id="f4d">Record every expense during the trip.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f5t">📊 Reports</h3>
+            <p id="f5d">Get instant tour and financial reports.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f6t">⚖ Settlement</h3>
+            <p id="f6d">Automatically calculate balances.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="section-title" id="dashboardTitle">
+        Dashboard Preview
+    </h2>
+
+    <div class="dashboard">
+
+        <div class="kpi">
+
+            <div>
+                <h3>3</h3>
+                <p id="tripText">Trips</p>
+            </div>
+
+            <div>
+                <h3>৳120K</h3>
+                <p id="collectText">Collected</p>
+            </div>
+
+            <div>
+                <h3>৳75K</h3>
+                <p id="expenseText">Expenses</p>
+            </div>
+
+            <div>
+                <h3>৳45K</h3>
+                <p id="balanceText">Balance</p>
+            </div>
+
+        </div>
+
+        <h3>Cox's Bazar Tour</h3>
+        <br>
+
+        <p>12 Members</p>
+        <p>Collection : ৳50,000</p>
+        <p>Expense : ৳32,000</p>
+        <p>Balance : ৳18,000</p>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="section-title" id="workTitle">
+        How It Works
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3 id="w1">1️⃣ Create Tour</h3>
+        </div>
+
+        <div class="card">
+            <h3 id="w2">2️⃣ Collect Money</h3>
+        </div>
+
+        <div class="card">
+            <h3 id="w3">3️⃣ Add Expenses</h3>
+        </div>
+
+        <div class="card">
+            <h3 id="w4">4️⃣ Settle Balance</h3>
+n>
+
+<footer>
+
+    <h3>VromonWallet</h3>
+
+    <br>
+
+    <p id="footerText">
+        Travel Fund & Expense Manager
+    </p>
+
+</footer>
+
+<script>
+
+let lang = "en";
+
+function toggleLanguage(){
+
+if(lang === "en"){
+
+document.getElementById("langBtn").innerText = "English";
+
+document.getElementById("subtitle").innerText =
+"ভ্রমণের সব হিসাব এক জায়গায়";
+
+document.getElementById("tagline").innerText =
+"পরিকল্পনা • সংগ্রহ • খরচ • হিসাব";
+
+document.getElementById("featureTitle").innerText =
+"VromonWallet কেন ব্যবহার করবেন?";
+
+document.getElementById("dashboardTitle").innerText =
+"ড্যাশবোর্ড প্রিভিউ";
+
+document.getElementById("workTitle").innerText =
+"কিভাবে কাজ করে";
+
+document.getElementById("tripText").innerText = "ট্যুর";
+document.getElementById("collectText").innerText = "সংগ্রহ";
+document.getElementById("expenseText").innerText = "খরচ";
+document.getElementById("balanceText").innerText = "অবশিষ্ট";
+
+document.getElementById("w1").innerText =
+"১️⃣ ট্যুর তৈরি করুন";
+
+document.getElementById("w2").innerText =
+"২️⃣ টাকা সংগ্রহ করুন";
+
+document.getElementById("w3").innerText =
+"৩️⃣ খরচ যুক্ত করুন";
+
+document.getElementById("w4").innerText =
+"৪️⃣ হিসাব মিলান";
+
+document.getElementById("footerText").innerText =
+"ভ্রমণের সব হিসাব এক জায়গায়";
+
+lang = "bn";
+
+}else{
+
+location.reload();
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
